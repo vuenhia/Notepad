@@ -1,19 +1,29 @@
 import { useState } from "react";
-export default function CreateNote() {
-	// Contains button for user to create notes
-	// Allows user to add section, and name for notes
-	// Sort the note into the section
+
+export default function CreateNote({ onAddNote }) {
 	const [clicked, setClicked] = useState(false);
+	const [newNote, setNewNote] = useState("");
+
+	const handleNewNote = () => {
+		if (!newNote.trim()) return;
+		onAddNote(newNote); // sends note up to the specific section
+		setClicked(false);
+		setNewNote("");
+	};
 
 	return (
 		<div>
 			{!clicked ? (
-				<button onClick={() => setClicked(true)}>Create Notes</button>
+				<button onClick={() => setClicked(true)}>Create Note</button>
 			) : (
 				<div>
-					<label>Section</label>
-					<input type="text" />
-					<button>Create</button>
+					<label>Title</label>
+					<input
+						type="text"
+						value={newNote}
+						onChange={(e) => setNewNote(e.target.value)}
+					/>
+					<button onClick={handleNewNote}>Create</button>
 					<button onClick={() => setClicked(false)}>Cancel</button>
 				</div>
 			)}
