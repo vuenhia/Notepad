@@ -1,0 +1,24 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.app-container {
+	justify-content: center;
+	display: grid;
+	margin: 0 auto;
+}
+
+.app-header {
+	text-align: center;
+	font-size: 2em;
+	margin: 5px;
+}
+.section-container {
+	display: flex;
+	justify-content: space-between;
+	min-width: 700px;
+	padding: 10px;
+}
+.section-notes {
+	padding: 10px;
+}
