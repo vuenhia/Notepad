@@ -54,15 +54,17 @@ export default function Sections() {
 			))}
 
 			{create && (
-				<div>
+				<div className="section-input">
 					<input
 						type="text"
 						value={newSectionName}
 						onChange={(e) => setNewSectionName(e.target.value)}
 						placeholder="Section Name"
 					/>
-					<button onClick={handleCreate}>Add</button>
-					<button onClick={() => setCreate(false)}>Cancel</button>
+					<div className="handle-buttons">
+						<button onClick={handleCreate}>Add</button>
+						<button onClick={() => setCreate(false)}>Cancel</button>
+					</div>
 				</div>
 			)}
 		</div>

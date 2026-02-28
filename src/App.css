@@ -15,6 +15,11 @@ button {
 	cursor: pointer;
 	font-size: 0.875em;
 }
+.handle-buttons {
+	display: flex;
+	gap: 5px;
+	padding: 5px 0;
+}
 .app-container {
 	justify-content: center;
 	display: grid;
@@ -36,6 +41,15 @@ button {
 	padding: 10px;
 	border-bottom: 1px solid #1f2937;
 }
+.section-input {
+	padding: 10px 0;
+}
+
+.section-input input {
+	height: 30px;
+	border-radius: 5px;
+}
+
 .section-notes {
 	padding: 10px;
 	background: #1e293b;
@@ -57,4 +71,18 @@ button {
 	text-align: center;
 	height: 200px;
 	border-radius: 5px;
+}
+.createNotes-buttons {
+	display: flex;
+	justify-content: flex-end;
+	width: 200px;
+}
+.createNote-input input {
+	height: 30px;
+	border-radius: 5px;
+}
+.createNote-input label {
+	font-weight: bold;
+	font-size: 1.4rem;
+	padding-right: 8px;
 }

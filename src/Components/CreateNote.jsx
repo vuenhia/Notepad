@@ -16,15 +16,19 @@ export default function CreateNote({ onAddNote }) {
 			{!clicked ? (
 				<button onClick={() => setClicked(true)}>Create Note</button>
 			) : (
-				<div>
+				<div className="createNote-input">
 					<label>Title</label>
 					<input
 						type="text"
 						value={newNote}
 						onChange={(e) => setNewNote(e.target.value)}
 					/>
-					<button onClick={handleNewNote}>Create</button>
-					<button onClick={() => setClicked(false)}>Cancel</button>
+					<div className="createNotes-buttons">
+						<div className="handle-buttons">
+							<button onClick={handleNewNote}>Create</button>
+							<button onClick={() => setClicked(false)}>Cancel</button>
+						</div>
+					</div>
 				</div>
 			)}
 		</div>
