@@ -2,6 +2,9 @@
 	margin: 0;
 	padding: 0;
 }
+*:focus:not(:focus-visible) {
+	outline: none;
+}
 body {
 	background: #0f172a;
 	color: #1e2a3a;
@@ -51,11 +54,10 @@ button {
 }
 
 .section-notes {
-	padding: 10px;
 	background: #1e293b;
 }
 .section-notes h2 {
-	background-color: #0f172a;
+	background-color: #ffffff;
 	color: #f8fafc;
 }
 .section-left-side {
