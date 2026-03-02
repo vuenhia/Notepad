@@ -1,14 +1,21 @@
+<<<<<<< HEAD
 import { useState, useRef, useEffect } from "react";
+=======
+import { useState } from "react";
+>>>>>>> 95751c4d118b925ac0eb9b9d99a56868854c1fb6
 
 export default function CreateNote({ onAddNote }) {
 	const [clicked, setClicked] = useState(false);
 	const [newNote, setNewNote] = useState("");
+<<<<<<< HEAD
 	const inputRef = useRef(null);
 	useEffect(() => {
 		if (clicked) {
 			inputRef.current.focus();
 		}
 	}, [clicked]);
+=======
+>>>>>>> 95751c4d118b925ac0eb9b9d99a56868854c1fb6
 
 	const handleNewNote = () => {
 		if (!newNote.trim()) return;
@@ -26,6 +33,7 @@ export default function CreateNote({ onAddNote }) {
 					<label>Title</label>
 					<input
 						type="text"
+<<<<<<< HEAD
 						ref={inputRef}
 						value={newNote}
 						onChange={(e) => setNewNote(e.target.value)}
@@ -35,6 +43,10 @@ export default function CreateNote({ onAddNote }) {
 								handleNewNote(e);
 							}
 						}}
+=======
+						value={newNote}
+						onChange={(e) => setNewNote(e.target.value)}
+>>>>>>> 95751c4d118b925ac0eb9b9d99a56868854c1fb6
 					/>
 					<div className="createNotes-buttons">
 						<div className="handle-buttons">

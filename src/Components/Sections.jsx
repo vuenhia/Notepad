@@ -1,12 +1,17 @@
 import Notes from "./Notes";
 import CreateNote from "./CreateNote";
+<<<<<<< HEAD
 import { useState, useRef, useEffect } from "react";
 import NoteModal from "./NoteModal";
+=======
+import { useState } from "react";
+>>>>>>> 95751c4d118b925ac0eb9b9d99a56868854c1fb6
 
 export default function Sections() {
 	const [create, setCreate] = useState(false);
 	const [newSectionName, setNewSectionName] = useState("");
 	const [sections, setSections] = useState([]);
+<<<<<<< HEAD
 	const inputRef = useRef(null);
 	const [selectedSectionIndex, setSelectedSectionIndex] = useState(null);
 	const [selectedNoteIndex, setSelectedNoteIndex] = useState(null);
@@ -16,6 +21,9 @@ export default function Sections() {
 			inputRef.current.focus();
 		}
 	}, [create]);
+=======
+
+>>>>>>> 95751c4d118b925ac0eb9b9d99a56868854c1fb6
 	const handleCreate = () => {
 		if (!newSectionName.trim()) return;
 		setSections((prev) => [
@@ -38,10 +46,14 @@ export default function Sections() {
 			),
 		);
 	};
+<<<<<<< HEAD
 	const handleNoteClick = (sectionIndex, noteIndex) => {
 		setSelectedSectionIndex(sectionIndex);
 		setSelectedNoteIndex(noteIndex);
 	};
+=======
+
+>>>>>>> 95751c4d118b925ac0eb9b9d99a56868854c1fb6
 	return (
 		<div>
 			<div className="section-container">
@@ -59,12 +71,17 @@ export default function Sections() {
 						</div>
 						<CreateNote onAddNote={(note) => handleAddNote(index, note)} />
 					</div>
+<<<<<<< HEAD
 
 					<div className="section-notes">
 						<Notes
 							notes={section.notes}
 							onNoteClick={(noteIndex) => handleNoteClick(index, noteIndex)}
 						/>
+=======
+					<div className="section-notes">
+						<Notes notes={section.notes} />
+>>>>>>> 95751c4d118b925ac0eb9b9d99a56868854c1fb6
 					</div>
 				</div>
 			))}
@@ -73,6 +90,7 @@ export default function Sections() {
 				<div className="section-input">
 					<input
 						type="text"
+<<<<<<< HEAD
 						ref={inputRef}
 						value={newSectionName}
 						onChange={(e) => setNewSectionName(e.target.value)}
@@ -83,6 +101,11 @@ export default function Sections() {
 								handleCreate(e);
 							}
 						}}
+=======
+						value={newSectionName}
+						onChange={(e) => setNewSectionName(e.target.value)}
+						placeholder="Section Name"
+>>>>>>> 95751c4d118b925ac0eb9b9d99a56868854c1fb6
 					/>
 					<div className="handle-buttons">
 						<button onClick={handleCreate}>Add</button>
@@ -90,6 +113,7 @@ export default function Sections() {
 					</div>
 				</div>
 			)}
+<<<<<<< HEAD
 			{selectedSectionIndex != null && selectedNoteIndex != null && (
 				<NoteModal
 					note={sections[selectedSectionIndex].notes[selectedNoteIndex]}
@@ -105,6 +129,8 @@ export default function Sections() {
 					hasPrev={selectedNoteIndex > 0}
 				/>
 			)}
+=======
+>>>>>>> 95751c4d118b925ac0eb9b9d99a56868854c1fb6
 		</div>
 	);
 }
