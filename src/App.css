@@ -57,9 +57,22 @@ button {
 	background: #1e293b;
 }
 .section-notes h2 {
-	background-color: #ffffff;
-	color: #f8fafc;
+	background-color: #334155;
+	margin: 15px;
+	padding: 15px;
+	border-radius: 6px;
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease,
+		background-color 0.2s ease;
 }
+.section-notes h2:hover {
+	cursor: pointer;
+	transform: translateY(-3px);
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+	background-color: #2563eb;
+}
+
 .section-left-side {
 	display: flex;
 	gap: 10px;
@@ -73,6 +86,20 @@ button {
 	text-align: center;
 	height: 200px;
 	border-radius: 5px;
+	color: #f8fafc;
+}
+.notes-container {
+	height: 100vh;
+}
+.note-separater-container {
+	display: grid;
+	margin: 0 auto;
+	height: 100%;
+	grid-template-rows: repeat(4, 1fr);
+	gap: 5px;
+}
+.note-grid {
+	border-bottom: 2px solid #0f172a;
 }
 .createNotes-buttons {
 	display: flex;
